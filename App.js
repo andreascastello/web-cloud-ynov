@@ -1,6 +1,7 @@
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import {useState} from "react";
 import {signup} from "./auth_signup_password";
+import {signin} from "./auth_signin_password";
 
 export default function App() {
   const [email, setEmail] = useState('');
@@ -22,6 +23,7 @@ export default function App() {
             secureTextEntry={true}
         ></TextInput>
         <Button title="Sign Up !" onPress={() => signup(email, password)}></Button>
+          <Button title="Sign In !" onPress={() => signin(email, password)}></Button>
       </View>
   );
 }
