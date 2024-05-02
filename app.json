@@ -3,6 +3,7 @@
     "experiments": {
       "baseUrl": "/web-cloud-ynov"
     },
+    "scheme": "web-cloud-ynov",
     "name": "web-cloud-ynov",
     "slug": "web-cloud-ynov",
     "version": "1.0.0",
@@ -18,7 +19,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.andreascastello.webcloudynov"
     },
     "android": {
       "adaptiveIcon": {
@@ -28,12 +30,23 @@
       "package": "com.andreascastello.webcloudynov"
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
         "projectId": "d0043d58-7dee-453a-b412-7fbc069b48e9"
       }
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
   }
 }
